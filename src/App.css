@@ -1,0 +1,91 @@
+/* App.css */
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  border-radius: 20px;
+  /* overflow: hidden; */
+  padding: 20px;
+}
+.app-div {
+  height: 100%;
+  border: 10px solid white;
+  border-radius: 25px;
+}
+
+/* Header should sit on top */
+.app>div:first-child {
+  flex-shrink: 0;
+}
+
+/* Main content container */
+.main-content {
+  display: flex;
+  /* overflow: hidden; */
+  height: 90%;
+}
+
+@media (max-width: 480px) {
+  .main-content {
+    display: flex;
+    height: auto;
+
+    /* overflow: hidden; */
+  }
+  
+}
+
+/* Sidebar styling */
+.main-content>div:first-child {
+  width: 20%;
+  padding: 16px;
+  /* overflow-y: auto; */
+}
+
+/* Content area */
+.main-content>div:nth-child(2) {
+  width: 40%;
+  height: 100%;
+  /* overflow-y: hidden; */
+  background-color: white;
+}
+
+/* Optional right section (if you keep it) */
+.main-content>div:nth-child(3) {
+  padding: 0px 20px 20px 20px;
+  /* overflow-y: hidden; */
+  width: 40%;
+}
+
+@media (max-width: 480px) {
+  .main-content {
+    flex-direction: column;
+  }
+  .main-content>div:nth-child(2) {
+  /* overflow-y: auto; */
+  width: auto;
+  background-color: transparent;
+  }
+  .main-content>div:nth-child(3) {
+    width: 100% !important;
+    /* overflow-y: auto; */
+
+  }
+
+}
+@media (max-width: 768px) {
+  .main-content {
+    flex-direction: column;
+  }
+  .main-content>div:nth-child(2) {
+  /* overflow-y: auto; */
+  }
+  .main-content>div:nth-child(3) {
+    width: 100% !important;
+    /* overflow-y: auto; */
+
+  }
+
+}

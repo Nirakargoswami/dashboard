@@ -1,0 +1,118 @@
+/* CalendarView.css */
+
+.calendar-container {
+    width: 100%;
+    margin: auto;
+    font-family: 'Segoe UI', sans-serif;
+    color: #333;
+  }
+  
+  .calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .nav-buttons button {
+    margin-left: 20px;
+    background: none;
+    border: none;
+    font-size: 1rem;
+    color: rgb(57, 51, 166);
+    cursor: pointer;
+
+  }
+  
+  .calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 0.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .calendar-day {
+    border-radius: 1rem;
+    text-align: center;
+  }
+  
+  .day-label {
+    font-size: 0.7rem;
+    color: #555;
+  }
+  
+  .day-number {
+    color: black;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin: 0.25rem 0;
+  }
+  
+  .time-slots {
+    margin-top: 0.5rem;
+  }
+  
+  .time {
+    color: black;
+    padding: 0.25rem 0.5rem;
+   
+    font-size: 0.75rem;
+    margin: 0.25rem auto;
+    width: fit-content;
+  }
+  
+  .time.active {
+    border-radius: 9999px;
+    background-color: rgb(57, 51, 166);
+    color: white;
+  }
+  
+  .appointments {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+  }
+  
+  .appointment-card {
+    padding: 0.857rem;
+    border-radius: 1rem;
+    background-color: #e0e7ff;
+    box-shadow: 0 0 8px rgba(0,0,0,0.05);
+  }
+  
+  .dentist {
+    background-color: rgb(56, 52, 168);
+    color: white;
+  }
+  
+  .appointment-card .time-range {
+    font-weight: bold;
+    font-size: 0.7rem;
+
+  }
+  
+  .appointment-card .name {
+    font-size: 0.675rem;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .calendar-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .appointments {
+      flex-direction: column;
+    }
+  }
+  
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .calendar-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  

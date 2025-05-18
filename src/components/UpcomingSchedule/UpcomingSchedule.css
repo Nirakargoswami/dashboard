@@ -1,0 +1,77 @@
+.upcoming-container {
+    width: 100%;
+  }
+  
+  .section-title {
+    font-size: 0.8rem;
+    color: rgb(193, 192, 209);    
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .day-section {
+    display: flex;
+    gap: 2rem;
+    width: 100%;
+    display: flex;
+    margin-bottom: 1rem;
+  }
+  
+  .day-section h3 {
+    font-size: 1.2rem;
+    color: #6b6b8d;
+    margin-bottom: 1rem;
+  }
+  
+  .card-row {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .simple-card {
+    background-color: #e5e8fb;
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  }
+  
+  .card-title {
+    display: block;
+    font-weight: 500;
+    color: #2d2d52;
+    margin-bottom: 0.5rem;
+    font-size: 0.8rem;
+
+  }
+  
+  .card-time {
+    color: #6b6b8d;
+    font-size: 0.7rem;
+  }
+  
+  @media (max-width: 768px) {
+    .card-row {
+      flex-direction: column;
+    }
+    .simple-card {
+      width: 100%;
+    }
+    .upcoming-container {
+      padding: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .section-title {
+      font-size: 1.5rem;
+    }
+    .day-section h3 {
+      font-size: 1rem;
+    }
+    .card-title {
+      font-size: 0.95rem;
+    }
+    .card-time {
+      font-size: 0.85rem;
+    }
+  }
